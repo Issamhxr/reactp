@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Com from "./Com.js";
 
 function App() {
   return (
@@ -7,19 +8,25 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
+          Edit <code>src/App.js</code> and save to pii.
+        </p> 
+         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
+        <Com />
           Learn React
-        </a>
+     
+          </a>
       </header>
     </div>
   );
+
 }
 
+
+
 export default App;
+

@@ -21,3 +21,10 @@
             
    
 }
+.art{
+    background-color: aqua;
+    box-shadow: cadetblue;
+    margin: 20px;
+    width: 50%;
+    justify-content: center;
+}

@@ -16,8 +16,8 @@ function App() {
     <div style={ {display:"flex", width :"60%"}}>
     
     <div style= {{width: "60%"}}>
-    <Post/>
-    <Post/>
+    <Post tit1={"yoy"} tit2={"yii"} />
+    <Post tit1={"pii"} tit2={"ychii"} ><h3>hello</h3></Post>
     <Post/>
     <Post/>
     <Post/>

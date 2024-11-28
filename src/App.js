@@ -10,9 +10,26 @@ import NavBar from './Component/NavBar.js';
 function App() {
   return (
     <div className="App">
+  
     <NavBar/>
-    <SidBar/>
+    <div style={ {display:"flex", justifyContent :"center"}}>
+    <div style={ {display:"flex", width :"60%"}}>
+    
+    <div style= {{width: "60%"}}>
     <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+    <Post/>
+    </div>
+    <div style= {{ width: "40%"}}>
+    <SidBar/>
+    </div>
+    </div>
+
+    </div>
       
     </div>
   );

@@ -1,5 +1,23 @@
 .yo{
     padding: 10px;
    border: solid 10px green ;
+  
+   margin: 25px;
 
+
+}
+
+.bu{
+    border: non;
+     color:white;
+     background-color :purple;
+     box-shadow: 0px 5px 7px rgba(0,0,0,0.5);
+     border-radius: 10px;
+     padding :10px;
+     cursor: pointer;
+     transition:all 0.3s ;
+    margin: 20px;
+    
+            
+   
 }

@@ -1,7 +1,7 @@
 
 import "./Comp.css"
 
-export default function Post ({tit1,tit2 ,children}){
+export default function Post ({tit1= "no tit1",tit2= "no tit2" ,children}){
 
     return(
        <div className={"yo"}>   

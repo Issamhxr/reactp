@@ -27,7 +27,7 @@ const ShowPost = Posts.map((post) => {
   return ( <Post  key={post.id} tit1={post.tit1} tit2={ post.tit2}/>)
 
 })
-
+let nid =4;
 
 
 
@@ -40,23 +40,58 @@ function App() {
 
 
   const [cuntry, setCuntry] = useState("") 
-  const [cuntries,setCuntries] =useState(["algeria","tonas" ,"maroco"])
+  const [cuntries,setCuntries] =useState([{id:1 ,  name:"algeria"},
+    {id:2 ,  name:"tonas"} ,{id:3 ,  name:"maroco"}])
 
    const listCuntries = cuntries.map((cunt)=>{
-   return <li>{cunt}</li>
+   return <li key={cunt.id}>{cunt.name} 
+   <button onClick={()=>{HandleDelete(cunt.id)}} >delete</button>
+
+
+   <button onClick={()=>{HandleEdit(cunt.id)
+
+   }}>edit</button>
+   </li>
 
  })
 
+  function HandleEdit (id){
+ const NewCuntries = cuntries.map((cun)=>{
+   if(id == cun.id)   {
+    let Newc={...cun, name: cun.name+"0"} 
+    return (Newc)}
+    else {return cun}
+
+ })
+ setCuntries(NewCuntries)
+
+
+  }
+
+ function HandleDelete(id){
+  const Newcuntries = cuntries.filter((cun)=>
+ {return cun.id !== id} 
+  )
+  setCuntries(Newcuntries)
+
+
+ }
+
+  function HandleClickChanges(){
+
+  setCuntries([...cuntries,{id:nid ,name:cuntry } ])
+ nid=nid+1
+  }
   return (
     <div className="App">
       
     <ul>{listCuntries}</ul>
     <input onChange={(e)=>{
 
-      
+  setCuntry(e.target.value)
 
     }}></input>
-    <button onClick={}>add</button>
+    <button onClick={HandleClickChanges} >add</button>
    
       
     </div>
